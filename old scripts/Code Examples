@@ -1,0 +1,81 @@
+
+EXAMPLE BASE CODE
+____________________________
+<html>
+
+<head>
+
+ <link rel="stylesheet" type="text/css" href="positions.css"/> 
+</head>
+
+<body>
+    <h1>      </h1>
+
+</body>
+
+
+</html>
+
+____________________________
+EXAMPLE TABLE ROWS 
+
+<tr>
+    <td>         </td>
+    <td>         <img src=  alt= Poster style=" width:100px" </td>
+    <td>         </td>
+    <td>         </td>
+    <td> 
+</tr>
+____________________________
+Example Form
+
+ <h1>  My First Form   </h1>
+    <form> 
+            <fieldset>
+                    <Label > First Name: 
+                        <input type="text" name="first name" id="first name"/></label><br/>
+                    <Label> Last Name: 
+                        <input type="text" name="first name" id="last name"/> </label><br/>
+                    <label> Email Address:
+                        <input type="text" name="first name" id= "last name"/> </label><br/>
+                    <label> Get marketing junk?
+                        <input type="checkbox"  name="option" checked id= "option"/> </label> <br/>
+                        <input type="submit" value="Sign Me Up!" />
+            </fieldset>
+
+    </form>
+____________________________
+Divs
+<div id= "div1" style= "border: 10px solid black; margin-bottom: 50px; padding: 10px; border-radius: 20px;">
+    <h2> Header Inside of Div1</h2>
+    <p>  bacon is awsome. </p>
+
+</div>
+
+STYLE CSS ____________________________CASE SENSITIVITY IS IMPORTANT *always open and close { }* always use ; at the end of each style
+<style> 
+<style type="text/css">  
+    .uglyBox { 
+        font-size: 10px; 
+        border: 40px;
+        border-radius: 15px;
+        background-color: blue;
+    }
+    .uglyGreenBox {
+        border: 20px;
+        font-size: 20px;  
+        border-radius: 10px;
+        background-color: blue;   
+    }
+ </style> 
+                ***THEN USE <section class:     >   ******
+    <section class= "uglyBox">
+    <p> Bacon ipsum dolor amet t-bone pancetta drumstick, tail venison doner short loin shoulder. Pork chop boudin fatback, shoulder corned beef biltong meatloaf. Ball tip beef swine tenderloin, meatball cow venison pork belly meatloaf hamburger jerky sausage turkey drumstick ham. Kielbasa beef ribs cupim doner ground round, salami pork belly.
+    </p>
+</section  >
+_______________________________
+
+Build a background Image 
+
+(background image)
+.background: url" file name"

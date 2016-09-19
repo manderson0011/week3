@@ -1,0 +1,21 @@
+  /* Main Styles*/
+  
+   body{ 
+            margin: 20px; 
+            background-color: cadetblue;
+        }
+
+        .yellowMedium{ 
+            color: yellow;
+            font-size: 20pt; 
+        }
+        .yellowLg{
+            color: black; 
+            font-size: 30pt; 
+        }
+        .almostBaconBrown{      
+            color: #C87F32;
+        }
+        .corporateBlue{
+           color: blue; 
+        }

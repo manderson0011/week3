@@ -1,0 +1,36 @@
+/* Main Styles*/
+/*Paragraph rule, this will effect all paragraphs*/
+
+ p { 
+     font-family: cursive; 
+     font-size: 14pt;
+ }
+
+tr:nth-child(even){
+    background-color: grey; 
+}
+tr:nth-child(odd){
+    background-color: yellow
+}
+    
+h1,h2,h3 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 25px; 
+}
+
+/*Custom Styles */
+
+
+
+
+
+/*Specific Styles*/
+#p1 {
+    font-size: 20pt; 
+    font-family: 'Times New Roman', Times, serif;
+}
+#p2 { 
+    font-size: 30pt;
+    font-family: "Georgia, 'Times New Roman', Times, serif";
+    background-color: purple; 
+}
