@@ -20,14 +20,16 @@ function setupGame(){
 function handleGuess(){
     var guess = $("#tbxGuess").val();
     if (+guess == answer){
-        //tell them the answer is right.
-          $("#message").text("You're right!");
+        //tell them the answer is right
+          $("#message").text("Your right!");
+          $("#message").show("<a href:http://20px.com/wp-content/uploads/2013/02/unicorn_pooping_a_rainbow_20px.jpg</a>");
+
     }
-   else{
+  else{
         //tell them the answer is wrong. 
-      $("#message").text("Nope, try again!");
+      $("#message").text("Nope, try again!",);
       $("#txbGuess").val("");
-    } 
+    }  
 
 };
 //set up the page for the game.
@@ -35,6 +37,8 @@ function playGame(){
     $("#intro").hide();
     $("#game").show();
      $("#tbxGuess").focus();
+     $("message").show
+     
 
 } 
 //when the page loads, setup the game.
@@ -46,4 +50,9 @@ $(function(){
     //Start the Game
     setupGame();
 });
+    //quit button to reset the game.
+    function quit(){
+        $("#startGame").on("click",quit);
+    }
+
 
