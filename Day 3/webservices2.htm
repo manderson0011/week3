@@ -75,8 +75,8 @@ $(function(){
 function darksyk_Complete(result){
     console.log(result.currently.summary);
     var hour1= result.hourly.data[0];
-    var time= new Date(hour1.time * 1000);
-    console.log("Time: " + time.toLocalString());
+    var time= new Date(hour1 * 1000);
+    console.log("Time: " + time);
 }
 
 $(function(){
