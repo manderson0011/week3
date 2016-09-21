@@ -1,0 +1,77 @@
+<html>
+
+<head>
+    <title></title>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+        crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+
+
+    <link rel="stylesheet" href="united-theme.css" type="text/css"/>
+</head>
+
+
+<body>
+
+    <div>
+
+        <nav class="navbar navbar-light bg-faded">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <ul class="nav navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Pricing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+            </ul>
+            <form class="form-inline pull-xs-right">
+                <input class="form-control" type="text" placeholder="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </nav>
+    </div>
+
+    <h1>BACON </h1>
+    <div>
+    Bacon ipsum dolor amet beef shank pig brisket tri-tip pork. Swine t-bone chuck, drumstick tri-tip frankfurter prosciutto
+    biltong meatloaf chicken. Meatloaf drumstick shank fatback jowl, venison biltong corned beef tenderloin ball tip t-bone
+    meatball ham tail. Shoulder rump kevin chicken t-bone sirloin leberkas. Shank filet mignon strip steak, chuck capicola
+    drumstick chicken boudin kielbasa venison. Boudin chicken spare ribs andouille brisket strip steak short ribs ground
+    round shoulder hamburger tail pork belly.
+    </div>
+<script>
+
+$(function(){
+ $.ajax({
+     url:"https://api.darksky.net/forecast/6e838fb1fe77f3c6fe31401f120c12cc/37.8267,-122.4233",
+     dataType: "jsonp",
+     success: function(result){
+         console.log(result.currently.summary);
+     }
+ });
+
+});
+
+
+</script>
+
+</body>
+
+</html>
