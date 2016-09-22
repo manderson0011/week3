@@ -18,7 +18,8 @@
 </head>
 
 
-<body>
+<body class="body">
+    
 
     <nav class="navbar navbar-light bg-faded">
         <a class="navbar-brand" href="#">Navbar</a>
@@ -43,6 +44,8 @@
             <button class="btn btn-outline-success" type="submit">Search</button>
         </form>
     </nav>
+
+  
 <div class="btn-group">
      <button class="btn btn-default btn-large dropdown-toggle" type="button" data-toggle="dropdown" aria-has-popup="true" aria-expanded ="false">
          Large Button<span class="caret"></span>
@@ -64,11 +67,10 @@
                 <li><a tabindex="-1" href="#">Separated link</a></li>
             </ul>
         </div>
-
-        <div>
-           
-
-        <div class="card">
+ <container>
+        <row> 
+            <col-md-3> 
+        <div class="card ">
                 <img class="card-img-top" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRv3aj3EVoaxpoTKVIELHcU-tLkPhL67dwcAOr-om-u-x3EXXdV"
                     alt="Card image cap">
                 <div class="card-block">
@@ -76,13 +78,6 @@
                     <p class="card-text">70</p>
                     
         </div>
-        <div class="card">
-                    <img class="card-img-top" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRv3aj3EVoaxpoTKVIELHcU-tLkPhL67dwcAOr-om-u-x3EXXdV"
-                        alt="Card image cap">
-                    <div class="card-block">
-                        <h4 class="card-title">Cloudy</h4>
-                        <p class="card-text">70</p>
-                        
         </div>
         <div class="card">
                         <img class="card-img-top" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRv3aj3EVoaxpoTKVIELHcU-tLkPhL67dwcAOr-om-u-x3EXXdV"
@@ -93,7 +88,23 @@
                           
          </div>
         </div>
+        
+    <script>
+function darksyk_Complete(result){
+    console.log(result.currently.summary);
+    var hour1= result.hourly.data[0];
+    var time= new Date(hour1 * 1000);
+    console.log("Time: " + time);
+}
 
+$(function(){
+    var request=
+    url: "http://api.darksky.net/forecast/6e838fb1fe77f3c6fe31401f120c12cc/37.8267,-122.4233",//+long","+lat",
+    dataType="jsonp",
+    success:darksky_Complete
+})
+
+</script>
 </body>
 
 </html>
