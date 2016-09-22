@@ -15,94 +15,58 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="weatherly.css" ></link>
 </head>
 
 
-<body class="body">
-    
+<body>
 
-    <nav class="navbar navbar-light bg-faded">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <ul class="nav navbar-nav">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Features</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Pricing</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
-            </li>
-        </ul>
 
-        
-        <form class="form-inline pull-xs-right">
-            <input class="form-control" type="text" placeholder="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
-    </nav>
+<h1> Weather </h1>
 
-  
-<div class="btn-group">
-     <button class="btn btn-default btn-large dropdown-toggle" type="button" data-toggle="dropdown" aria-has-popup="true" aria-expanded ="false">
-         Large Button<span class="caret"></span>
-     </button>
-     <ul class="dropdown-menu">
-         <li> Item 1 </li>
-         <li> Item 2 </li>
-         <li> Item 3 </li>
-     </ul>
-</div>
 
-    <div class="container-fluid">
-        <div class="row" <div class="container-fluid-center">
-            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
-                <li><a tabindex="-1" href="#">Action</a></li>
-                <li><a tabindex="-1" href="#">Another action</a></li>
-                <li><a tabindex="-1" href="#">Something else here</a></li>
-                <li class="divider"></li>
-                <li><a tabindex="-1" href="#">Separated link</a></li>
-            </ul>
+  <div class= "container">
+    <div class= "row">
+      <div class="col-md-4 foggyDayPic">Hello
+          <div class="content text-center"> 
+              <h2> City, State </h2> <br />
+              <h3> 70  </h3> <br />
+              <h4> Max Temp </h4><br />
+              <h5> Min Temp </h5><br />
+              <h6> Rain %  </h6>
+
+          </div>
+ </div>
+    </div>
         </div>
- <container>
-        <row> 
-            <col-md-3> 
-        <div class="card ">
-                <img class="card-img-top" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRv3aj3EVoaxpoTKVIELHcU-tLkPhL67dwcAOr-om-u-x3EXXdV"
-                    alt="Card image cap">
-                <div class="card-block">
-                    <h4 class="card-title">Sunny</h4>
-                    <p class="card-text">70</p>
-                    
-        </div>
-        </div>
-        <div class="card">
-                        <img class="card-img-top" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRv3aj3EVoaxpoTKVIELHcU-tLkPhL67dwcAOr-om-u-x3EXXdV"
-                            alt="Card image cap">
-                        <div class="card-block">
-                            <h4 class="card-title">Rain</h4>
-                            <p class="card-text">70</p>
-                          
-         </div>
-        </div>
-        
-    <script>
-function darksyk_Complete(result){
+            
+              
+        <script>
+function darksky_Complete(result){
     console.log(result.currently.summary);
     var hour1= result.hourly.data[0];
     var time= new Date(hour1 * 1000);
     console.log("Time: " + time);
 }
+function google_Complete(result){
+    console.log (result.results[0].geometry.location.lat);
+    console.log (result.results[0].geometry.location.lng);
 
+}
 $(function(){
-    var request=
-    url: "http://api.darksky.net/forecast/6e838fb1fe77f3c6fe31401f120c12cc/37.8267,-122.4233",//+long","+lat",
-    dataType="jsonp",
-    success:darksky_Complete
-})
+    var request={
+    url: "https://api.darksky.net/forecast/6e838fb1fe77f3c6fe31401f120c12cc/37.8267,-122.4233", //+long","+lat",
+    dataType: "jsonp",
+    success: darksky_Complete};
+  var request={
+    url: "https://maps.googleapis.com/maps/api/geocode/json?address=41501&key=AIzaSyBYU-nRSm6HXOq470xg5b_A5bXOwz7rOh4", 
+    dataType: "json",
+    success: google_Complete};
+
+    $.ajax(request);
+});
+
+    
 
 </script>
 </body>
