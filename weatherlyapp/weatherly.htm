@@ -21,13 +21,17 @@
 
 <body>
 
-
+ <button>SEARCH </button><input> 
+ <div class="input">
+  <label for="usr">()</label>
+  <input type="text" class="form-control" id="usr">
+</div>
 <h1> Weather </h1>
 
 
-  <div class= "container">
+  <div class= "container content">
     <div class= "row">
-      <div class="col-md-4 foggyDayPic">Hello
+      <div class="col-md-4 foggyDayPic">
           <div class="content text-center"> 
               <h2> City, State </h2> <br />
               <h3> 70  </h3> <br />
@@ -41,11 +45,11 @@
                 morning sum
                 afternoon sum
                 evening summary
-                <button>SEARCH </button>
-          </div>
- </div>
-    </div>
+               
+</div>
+     </div>
         </div>
+            </div>
             
               
         <script>
@@ -56,9 +60,11 @@ function darksky_Complete(result){
     console.log("Time: " + time);
 }
 function google_Complete(result){
-    console.log (result.results[0].geometry.location.lat);
-    console.log (result.results[0].geometry.location.lng);
-
+    console.log (result.results[0].geometry.location.lat);//latitude
+    console.log (result.results[0].geometry.location.lng);//longitude
+    console.log (result.results[0].currently.temperature); //Tempature
+  
+   
 }
 $(function(){
     var request={
