@@ -21,14 +21,9 @@
 
 <body>
 
-    <button onclick="request">Search</button>
 
 
-    <div class="input">
-        <label for="usr">()</label>
-        <input type="text" class="form-control" id="usr">
-    </div>
-    <h1> Weather </h1>
+
 
 
     <div class="container content">
@@ -40,28 +35,42 @@
                     <h4> Max Temp </h4><br />
                     <h5> Min Temp </h5><br />
                     <h6> Rain % </h6>
-                    <h7>Summary morning temp afternoon temp evening temp morning sum afternoon sum evening summary </h7> 
-         </div>
+                    <!--Summary morning temp afternoon temp evening temp morning sum afternoon sum evening summary </h7> 
+       -->
+                    <div class="input">
+                        <label for="usr"></label>
+                        <button onclick="request">Search</button>
+                        <input type="text" class="form-control" id="usr">
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-         <div class="col-md-4 foggyDayPic">
-                <div class="content text-center">
+    <div class="container contenT">
+        <div class="row">
+            <div class="col-md-4 foggyDayPic">
+                <div class="content text-center ">
                     <h2> City, State </h2> <br />
                     <h3> 70 </h3> <br />
                     <h4> Max Temp </h4><br />
                     <h5> Min Temp </h5><br />
                     <h6> Rain % </h6>
-                    <h7>Summary morning temp afternoon temp evening temp morning sum afternoon sum evening summary </h7> 
-                </div>     
-                
-       
+                    <!-- <h7>Summary morning temp afternoon temp evening temp morning sum afternoon sum evening summary </h7>-->
+                    <div class="input">
+                        <label for="usr"></label>
+                        <button onclick="request">Search</button>
+                        <input type="text" class="form-control" id="usr">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     </div>
 
 
     <script>
 
-        
+
 function darksky_complete(result){
     var hour1= result.hourly.data[0];
     var time= new Date(hour1 * 1000);
@@ -99,6 +108,11 @@ $(function(){
 
     $.ajax(request);
 });
+
+
+
+
+
     
 
 </script>
