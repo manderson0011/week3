@@ -76,13 +76,12 @@ function darksky_complete(result){
     var time= new Date(hour1 * 1000);
     console.log("Time: " + time);
   
-   
-}
+   }
 function google_Complete(result){
-    var darkSkyUrl= "https://api.darksky.net/forecast/b7f775042bed3e8fb1834d6c3767ea82/" + lat + ',' + lng;
+   // var darkSkyUrl= "https://api.darksky.net/forecast/b7f775042bed3e8fb1834d6c3767ea82/" + lat + ',' + lng;
     var lat = result.results[0].geometry.location.lat;
     var lng = result.results[0].geometry.location.lng;
-    forcastInfo(darkSkyUrl);     
+   console.log(lat);    
 
   }
    function forcastInfo(darkSkyUrl){
@@ -95,16 +94,13 @@ function google_Complete(result){
         $.ajax(results);
 
         }
-function search(){
-    var result = $("request").val();
-}
+
 
 $(function(){
-
     var request={
     url: "https://maps.googleapis.com/maps/api/geocode/json?address=" + 41501 + "&key=AIzaSyAQsMF6GQMAD_JlBLibE1ZprVVwxK0kfac", 
     dataType: "json",
-    success: google_Complete};
+    success: google_Complete };
 
     $.ajax(request);
 });
