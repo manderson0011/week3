@@ -7,10 +7,17 @@
     background-image: url("http://onlineclock.net/bg/rain/rain.jpg");
 
 }
+.sunnyDayPic{
+    background-image: url
 
+}
 
 .content{
-    font-size: 15pt;
+    font-size: 20pt;
     color:black;
+    
+}
+
+.appWeatherInfo{
 
 }

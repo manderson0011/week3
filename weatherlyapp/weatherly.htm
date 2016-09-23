@@ -15,70 +15,78 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="weatherly.css" ></link>
+    <link rel="stylesheet" href="weatherly.css"></link>
 </head>
 
 
 <body>
 
- <button>SEARCH </button><input> 
- <div class="input">
-  <label for="usr">()</label>
-  <input type="text" class="form-control" id="usr">
-</div>
-<h1> Weather </h1>
+    <button>SEARCH </button><input>
+    <div class="input">
+        <label for="usr">()</label>
+        <input type="text" class="form-control" id="usr">
+    </div>
+    <h1> Weather </h1>
 
 
-  <div class= "container content">
-    <div class= "row">
-      <div class="col-md-4 foggyDayPic">
-          <div class="content text-center"> 
-              <h2> City, State </h2> <br />
-              <h3> 70  </h3> <br />
-              <h4> Max Temp </h4><br />
-              <h5> Min Temp </h5><br />
-              <h6> Rain %  </h6>
-                Summary
-                morning temp
-                afternoon temp
-                evening temp
-                morning sum
-                afternoon sum
-                evening summary
-               
-</div>
-     </div>
-        </div>
+    <div class="container content">
+        <div class="row">
+            <div class="col-md-4 foggyDayPic">
+                <div class="content text-center">
+                    <h2> City, State </h2> <br />
+                    <h3> 70 </h3> <br />
+                    <h4> Max Temp </h4><br />
+                    <h5> Min Temp </h5><br />
+                    <h6> Rain % </h6>
+                    Summary morning temp afternoon temp evening temp morning sum afternoon sum evening summary
+                <div class="col-md-6">
+                </div>
+                </div>
             </div>
-            
-              
-        <script>
+        </div>
+    </div>
+
+
+    <script>
+
+        
 function darksky_Complete(result){
-    console.log(result.currently.summary);
     var hour1= result.hourly.data[0];
     var time= new Date(hour1 * 1000);
     console.log("Time: " + time);
-}
-function google_Complete(result){
-    console.log (result.results[0].geometry.location.lat);//latitude
-    console.log (result.results[0].geometry.location.lng);//longitude
-    console.log (result.results[0].currently.temperature); //Tempature
   
    
 }
+function google_Complete(result){
+    var darkSkyUrl= "https://api.darksky.net/forecast/6e838fb1fe77f3c6fe31401f120c12cc/" + lat + ',' + lng;
+    var lat = result.results[0].geometry.location.lat;//latitude
+    var lng = result.results[0].geometry.location.lng;//
+
+
+  }
+   function forcastInfo(darkSkyUrl){
+            var results =  {
+                url: "https://api.darksky.net/forecast/6e838fb1fe77f3c6fe31401f120c12cc/" + lat + ',' + lng,
+                dataType: "jsonp",
+                success: darksky_complete
+            };
+
+        $.ajax(results);
+
+        }
+
 $(function(){
     var request={
-    url: "https://api.darksky.net/forecast/6e838fb1fe77f3c6fe31401f120c12cc/37.8267,-122.4233", //+long","+lat",
+    url: "https://api.darksky.net/forecast/6e838fb1fe77f3c6fe31401f120c12cc/37.8267,-122.4233",
     dataType: "jsonp",
     success: darksky_Complete};
-  var request={
+    var request={
     url: "https://maps.googleapis.com/maps/api/geocode/json?address=41501&key=AIzaSyBYU-nRSm6HXOq470xg5b_A5bXOwz7rOh4", 
     dataType: "json",
     success: google_Complete};
 
     $.ajax(request);
 });
-
     
 
 </script>
