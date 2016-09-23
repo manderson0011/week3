@@ -21,7 +21,9 @@
 
 <body>
 
-    <button>SEARCH </button><input>
+    <button onclick="request">Search</button>
+
+
     <div class="input">
         <label for="usr">()</label>
         <input type="text" class="form-control" id="usr">
@@ -38,12 +40,22 @@
                     <h4> Max Temp </h4><br />
                     <h5> Min Temp </h5><br />
                     <h6> Rain % </h6>
-                    Summary morning temp afternoon temp evening temp morning sum afternoon sum evening summary
-                <div class="col-md-6">
-                </div>
-                </div>
+                    <h7>Summary morning temp afternoon temp evening temp morning sum afternoon sum evening summary </h7> 
+         </div>
             </div>
         </div>
+    </div>
+         <div class="col-md-4 foggyDayPic">
+                <div class="content text-center">
+                    <h2> City, State </h2> <br />
+                    <h3> 70 </h3> <br />
+                    <h4> Max Temp </h4><br />
+                    <h5> Min Temp </h5><br />
+                    <h6> Rain % </h6>
+                    <h7>Summary morning temp afternoon temp evening temp morning sum afternoon sum evening summary </h7> 
+                </div>     
+                
+       
     </div>
 
 
@@ -75,15 +87,13 @@ function google_Complete(result){
 
         }
 function search(){
-    $( button    ).on("click", request ");
-    
     var result = $("request").val();
 }
 
 $(function(){
 
     var request={
-    url: "https://maps.googleapis.com/maps/api/geocode/json?address=" + address + "&key=AIzaSyAQsMF6GQMAD_JlBLibE1ZprVVwxK0kfac", 
+    url: "https://maps.googleapis.com/maps/api/geocode/json?address=" + 41501 + "&key=AIzaSyAQsMF6GQMAD_JlBLibE1ZprVVwxK0kfac", 
     dataType: "json",
     success: google_Complete};
 

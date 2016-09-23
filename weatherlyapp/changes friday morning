@@ -1,0 +1,97 @@
+<html>
+
+<head>
+    <title></title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+        crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="weatherly.css"></link>
+</head>
+
+
+<body>
+
+    <button>SEARCH </button><input>
+    <div class="input">
+        <label for="usr">()</label>
+        <input type="text" class="form-control" id="usr">
+    </div>
+    <h1> Weather </h1>
+
+
+    <div class="container content">
+        <div class="row">
+            <div class="col-md-4 foggyDayPic">
+                <div class="content text-center">
+                    <h2> City, State </h2> <br />
+                    <h3> 70 </h3> <br />
+                    <h4> Max Temp </h4><br />
+                    <h5> Min Temp </h5><br />
+                    <h6> Rain % </h6>
+                    Summary morning temp afternoon temp evening temp morning sum afternoon sum evening summary
+                <div class="col-md-6">
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+
+        
+function darksky_complete(result){
+    var hour1= result.hourly.data[0];
+    var time= new Date(hour1 * 1000);
+    console.log("Time: " + time);
+  
+   
+}
+function google_Complete(result){
+    var darkSkyUrl= "https://api.darksky.net/forecast/b7f775042bed3e8fb1834d6c3767ea82/" + lat + ',' + lng;
+    var lat = result.results[0].geometry.location.lat;
+    var lng = result.results[0].geometry.location.lng;
+    forcastInfo(darkSkyUrl);     
+
+  }
+   function forcastInfo(darkSkyUrl){
+            var results =  {
+                url: darkSkyUrl,
+                dataType: "jsonp",
+                success: darksky_complete
+            };
+
+        $.ajax(results);
+
+        }
+function search(){
+    $( button    ).on("click", request ");
+    
+    var result = $("request").val();
+}
+
+$(function(){
+
+    var request={
+    url: "https://maps.googleapis.com/maps/api/geocode/json?address=" + address + "&key=AIzaSyAQsMF6GQMAD_JlBLibE1ZprVVwxK0kfac", 
+    dataType: "json",
+    success: google_Complete};
+
+    $.ajax(request);
+});
+    
+
+</script>
+</body>
+
+</html>
