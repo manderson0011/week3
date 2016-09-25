@@ -1,63 +1,51 @@
 .foggyDayPic{
     background-image:url("https://s-media-cache-ak0.pinimg.com/564x/8a/ba/28/8aba28e0425be4298c2f4162174fa839.jpg");
-    background-repeat: no-repeat;
-    border: 3px solid red;
-    border-radius: 2px;
+
   
 }
 .rainDayPic{
     background-image: url("http://onlineclock.net/bg/rain/rain.jpg");
-    width: 375px;
-    background-repeat: no-repeat;
-    border: 2px solid red;
+
 }
 .sunnyDayPic{
     background-image: url("https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRl-86h2KS0hfrLqtzO7oG6_79Dx8nrunakQFzMLc8GJkS6nimzJQ");
-    width: 375px;
-    background-repeat: no-repeat;
-    border: 1px solid red;
+
 }
 .snowDayPic{
     background-image: url("https://s-media-cache-ak0.pinimg.com/236x/6d/56/32/6d5632498791774dd2326ed026c8aae1.jpg");
-    width: 375px;
-    width: 375px;
-    background-repeat: no-repeat;
-    border: 2px solid red;
+ 
+  
 }
-.partlyCloudy{
+.partlyCloudyPic{
     background-image: url("https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcS0iCtHfTh8OxYCyrxwSDhFqp-ETqtj5JPAzV606-_PGC2LLjQhAA");
-    width: 200px;
-    width: 375px;
-    background-repeat: no-repeat;
-    border: 2px solid red;
+  
 }
 .windyDay{
    background-image: url("https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQ6YRkVAQGB858692OKM_WJVkj5l_DtdbUUPHPVTJTVxWoJsvF1");
-    width: 200px;
-    width: 375px;
-    background-repeat: no-repeat;
-    border: 2px solid red;
-
-}
-.clearNight{
-  background-image: url("https://s-media-cache-ak0.pinimg.com/236x/6e/21/76/6e2176e7dc1299d7a9c8e374d81d426b.jpg");
-    width: 200px;
-    width: 375px;
-    background-repeat: no-repeat;
-    border: 2px solid red;
-}
-
-
-
     
-
-body{
-  font-size: 30pt;
-    color:red;
-
-
 }
 
+
+.cards1 {
+
+    border-radius: 4px;
+    background-repeat:no-repeat;
+    height:475px; 
+    background-size: 100% 100%;
+    margin:6px;
+    text-align:center;
+    color: white;
+    background-repeat: no-repeat;
+    border: 2px solid red;
+}
+
+
+.text{
+    color: darkred;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    background-color: white;
+}
 
 
 

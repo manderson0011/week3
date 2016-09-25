@@ -4,7 +4,8 @@
     <title></title>
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-    <script type="text/javascript" src="weatherly.js"></link>
+    <script type="text/javascript" src="weatherly.js"></link><script>
+    <link rel="stylesheet" href="weatherly.css"></link>
                     <!-- Latest compiled and minified CSS -->
                     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
                         crossorigin="anonymous">
@@ -16,79 +17,97 @@
                     <!-- Latest compiled and minified JavaScript -->
                     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
                         crossorigin="anonymous"></script>
-                    <link rel="stylesheet" href="weatherly.css"></link>
+                    
 
 </head>
 
 
 <body>
 
-
-
-    <div class="LargeTemp textType">
-
         <div class="input">
-            <label for="userEnter"></label>
-            <button id="button1" type="button" onclick="testGenerateCard()">Search</button>
-            <input type="text" class="form-control" id="userEnter"> </input>
+            <label for=""></label>
+            <button id="button1" type="button" onclick="button1()">Search</button>
+            <input type="text" class="form-control" id="#button1" placeholder="Enter Information"/>
         </div>
 
+
+    <div class="text">
+        
         <h1>&&How Does Your Day Look?&&</h1>
 
-    </div>
-    <div class="row col-xs-8 col-sm-6 col-md-4 col-lg-3 ">
-    </div>
-    <div class="row" style="height:15px ">
-    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="inputBox" placeholder="Enter Information"/>
+                    </div>
+                    <button type="button" id="button1" class="btn btn-success"> <span class="glyphicon glyphicon-plus"></button>
+                </form>
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <ul class="dropdown-menu" role="menu">
+                        </ul>
+                    </li>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="http:/www.weather.com" target="_blank">Weather Channel</a></li>
+
+                    </ul>
+
+            </div>
+        </div>
+    </nav>
+
+
+
+</div>
+    <div class="row col-xs-8 col-sm-6 col-md-4 col-lg-3">
+
+</div>
+    <div class="row" style="height:40px">
+</div>
 
     <div class="container">
         <div class="row ">
-            <div class="container" id="newCard1">
-            </div>
-            <div>
+            <div class="container" id="newCard2">
+                </div>
 
                 <div class="container" id="newCard2">
-                    <div id="card1" class=" col-xs-10 col-sm-6 col-md-4 col-lg-3 rainDayPic">
-                        <div class="row " style=" text-align:center; color: red">
-                            <div class="col-md-12 >
-                                    <h3>City, State</h3>
+                    <div id="card1" class=" col-xs-10 col-sm-6 col-md-4 col-lg-3">
+                        <div class="row " style="text-align:center; color: red">
+                            <div class="col-md-12">
+                                    <h3 >&&City&&</h3>
 
-                                </div>
+                            </div>
                                 <div class=" row " style="text-align:center; color: red ">
                                     <h5>&&Date and Time&&</h5>
-                                </div>
-
+                            </div>
                                 <div class="row " style="color: red ">
 
                                     <h1>&& Large Temp&&</h1>
                                 
-                                </div>
+                            </div>
                                 <div class="row " style="height:60px ">
                                     <div class="col-md-4 "></div>
                                     <div id="iconBox " class="col-md-4 "></div>
                                     <div class="col-md-4 "></div>
 
-                                </div>
+                            </div>
                                 <div class="row " style="height:20px; text-align:center; color: red ">
                                     <div class="col-md-4 "></div>
                                     <div class="col-md-4 ">
-                                        <h2 sytle="margin-left:3px ">Condition</h2>
-                                    </div>
+                                        <h2 sytle="margin-left:3px ">&&Condition&&</h2>
+                            </div>
                                     <div class="col-md-4 "></div>
 
-                                </div>
+                            </div>
                                 <div class="row " style="height:20px "></div>
-
                                 <div class="row " style="height:50px "></div>
                                 <div class="row ">
                                     <hr style="width:280px " />
-                                </div>
+                            </div>
                                 <div class="row " style="height:10px ">
 
-                                </div>
+                            </div>
                                 <div class="row " style="color:red ">
                                     <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 ">
-                                        <h5>&&Minute Temp&&</h5>
+                                        <h5>&&Min Temp&&</h5>
                                     </div>
                                     <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 ">
                                         <h5>&&Rain&&</h5>
@@ -96,7 +115,7 @@
                                     <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 ">
                                         <h5>&&Maximum Temp&&</h5>
                                     </div>
-                                </div>
+                           </div>
                                 <div class="row " style= "color: red ">
                                     <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 ">
                                         <h5>&&Minimum&&</h5>
@@ -106,8 +125,7 @@
                                     </div>
                                     <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 ">
                                         <h5>&&Maximum&&</h5>
-
-                                    </div>
+                             </div>
                                     <div class="row " style="height:5px ">
 
                                     </div>
@@ -115,9 +133,10 @@
                             </div>
                         </div>
                     </div>
-                        <!-- Card Ending-->
+               </div>
+    </div>
+     
 
-                  
                 </body>
 
                 </html>
