@@ -1,27 +1,53 @@
 .foggyDayPic{
-    background-image:url("http://www.vectorbackground.net/wp-content/uploads/2013/01/Rain-Background.jpg");
-
+    background-image:url("https://s-media-cache-ak0.pinimg.com/564x/8a/ba/28/8aba28e0425be4298c2f4162174fa839.jpg");
+    background-repeat: no-repeat;
+    border: 3px solid red;
+    border-radius: 2px;
   
 }
 .rainDayPic{
     background-image: url("http://onlineclock.net/bg/rain/rain.jpg");
-
+    width: 375px;
+    background-repeat: no-repeat;
+    border: 2px solid red;
 }
 .sunnyDayPic{
-    background-image: url
-
+    background-image: url("https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRl-86h2KS0hfrLqtzO7oG6_79Dx8nrunakQFzMLc8GJkS6nimzJQ");
+    width: 375px;
+    background-repeat: no-repeat;
+    border: 1px solid red;
+}
+.snowDayPic{
+    background-image: url("https://s-media-cache-ak0.pinimg.com/236x/6d/56/32/6d5632498791774dd2326ed026c8aae1.jpg");
+    width: 375px;
+    width: 375px;
+    background-repeat: no-repeat;
+    border: 2px solid red;
+}
+.partlyCloudy{
+    background-image: url("https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcS0iCtHfTh8OxYCyrxwSDhFqp-ETqtj5JPAzV606-_PGC2LLjQhAA");
+    width: 200px;
+    width: 375px;
+    background-repeat: no-repeat;
+    border: 2px solid red;
 }
 
-.content{
-    font-size: 20pt;
-    color:black;
+
+
+
+
 
     
+
+body{
+  font-size: 30pt;
+    color:red;
+
+
 }
 
-.search{
 
 
-}
+
 
 
