@@ -31,9 +31,21 @@
     background-repeat: no-repeat;
     border: 2px solid red;
 }
+.windyDay{
+   background-image: url("https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQ6YRkVAQGB858692OKM_WJVkj5l_DtdbUUPHPVTJTVxWoJsvF1");
+    width: 200px;
+    width: 375px;
+    background-repeat: no-repeat;
+    border: 2px solid red;
 
-
-
+}
+.clearNight{
+  background-image: url("https://s-media-cache-ak0.pinimg.com/236x/6e/21/76/6e2176e7dc1299d7a9c8e374d81d426b.jpg");
+    width: 200px;
+    width: 375px;
+    background-repeat: no-repeat;
+    border: 2px solid red;
+}
 
 
 
